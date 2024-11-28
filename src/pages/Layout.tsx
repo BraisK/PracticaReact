@@ -2,8 +2,8 @@ import { Link, Outlet } from "react-router-dom";
 
 const Footer = () => (
   <footer>
-    Pagina creada por Angel
-    <Link to="/">Volver</Link>
+    Pagina creada por Brais
+    <Link className="m-4" to="/">Volver</Link>
   </footer>
 );
 
