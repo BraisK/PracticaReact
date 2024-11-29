@@ -132,5 +132,23 @@ export const routes = [
     title: "Ejercicio 5",
     description: "Crea un componente Boton",
     component: React.lazy(() => import("../pages/Ejercicio5")),
+  },
+  {
+    to: "Ejem14",
+    title: "Inicializacion del esetado",
+    description: "Como inicializar el estado",
+    component: React.lazy(() => import("../pages/Ejem14")),
+  }, 
+  {
+    to: "Ejem15",
+    title: "Mostrar varios elementos",
+    description: "Usamos el map para mostrar varios elementos",
+    component: React.lazy(() => import("../pages/Ejem15")),
+  },
+  {
+    to: "Ejercicio 6",
+    title: "Ejercicio 6",
+    description: "Selleccionar elementos de una lista",
+    component: React.lazy(() => import("../pages/Ejercicio6")),
   }, 
 ];
