@@ -5,7 +5,7 @@
  * Por defecto, aparecerá marcado un elemento (el que se le pase por props)
  */
 
-import React, { useState } from "react"
+import  { useState } from "react"
 interface Props{
   initialSelected?:number
 }

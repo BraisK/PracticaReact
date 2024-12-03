@@ -108,7 +108,7 @@ export const routes = [
     title: "Ejercicio 3",
     description: "Mostrar y ocultar texto",
     component: React.lazy(() => import("../pages/Ejercicio3")),
-  },  
+  },
   {
     to: "Ejem12",
     title: "Manejo del estado 2",
@@ -126,7 +126,7 @@ export const routes = [
     title: "Ejercicio 4",
     description: "Lanzamiento de un dado",
     component: React.lazy(() => import("../pages/Ejercicio4")),
-  }, 
+  },
   {
     to: "Ejercicio 5",
     title: "Ejercicio 5",
@@ -138,7 +138,7 @@ export const routes = [
     title: "Inicializacion del esetado",
     description: "Como inicializar el estado",
     component: React.lazy(() => import("../pages/Ejem14")),
-  }, 
+  },
   {
     to: "Ejem15",
     title: "Mostrar varios elementos",
@@ -150,5 +150,47 @@ export const routes = [
     title: "Ejercicio 6",
     description: "Selleccionar elementos de una lista",
     component: React.lazy(() => import("../pages/Ejercicio6")),
-  }, 
+  },
+  {
+    to: null,
+    title: "Efectos",
+    description: "",
+    component: React.lazy(() => import("../pages/Home")),
+  },
+  {
+    to: "Ejem16",
+    title: "Ciclo de vida",
+    description: "Uso del hook useEffect",
+    component: React.lazy(() => import("../pages/Ejem16")),
+  },
+  {
+    to: "Ejem17",
+    title: "Ciclo de vida",
+    description: "Desmontar el estado",
+    component: React.lazy(() => import("../pages/Ejem17")),
+  },
+  {
+    to: "Ejem18",
+    title: "Conectandome a apis",
+    description: "Obteniendo lista de pokemons",
+    component: React.lazy(() => import("../pages/Ejem18")),
+  },
+  {
+    to: "Ejem19",
+    title: "Conectandome a apis promiseAll",
+    description: "Obteniendo lista de pokemons con foto",
+    component: React.lazy(() => import("../pages/Ejem19")),
+  },
+  {
+    to: "Ejem20",
+    title: "Eventos del teclado",
+    description: "Capturar eventos del teclado",
+    component: React.lazy(() => import("../pages/Ejem20")),
+  },
+  {
+    to: "Ejercicio 7",
+    title: "Ejercicio 7",
+    description: "Bitcoins",
+    component: React.lazy(() => import("../pages/Ejercicio7")),
+  },
 ];
