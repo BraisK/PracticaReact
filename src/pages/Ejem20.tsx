@@ -11,6 +11,9 @@ export default function Ejem20() {
     window.addEventListener('keydown', controlTecla)
 
     // falta desmontar el componente
+    return ()=>{
+      window.removeEventListener('keydown', controlTecla)
+    }
   }, [])
 
   return (

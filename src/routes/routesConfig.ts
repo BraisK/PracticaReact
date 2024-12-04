@@ -193,4 +193,22 @@ export const routes = [
     description: "Bitcoins",
     component: React.lazy(() => import("../pages/Ejercicio7")),
   },
+  {
+    to: "Ejem21",
+    title: "Problemas con el useEffect",
+    description: "Bucles infinitos",
+    component: React.lazy(() => import("../pages/Ejem21")),
+  },
+  {
+    to: "Ejem22",
+    title: "Formularios simples",
+    description: "Control de formularios",
+    component: React.lazy(() => import("../pages/Ejem22")),
+  },
+  {
+    to: "Ejem23",
+    title: "Formularios con campos multiples",
+    description: "Control de formularios",
+    component: React.lazy(() => import("../pages/Ejem23")),
+  },
 ];
