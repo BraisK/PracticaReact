@@ -211,4 +211,28 @@ export const routes = [
     description: "Control de formularios",
     component: React.lazy(() => import("../pages/Ejem23")),
   },
+  {
+    to: "Ejercicio 8",
+    title: "Ejercicio 8",
+    description: "Bitcoins",
+    component: React.lazy(() => import("../pages/Ejercicio8")),
+  }, 
+  {
+    to: "Ejem24",
+    title: "Hooks personalizados",
+    description: "Crear nuestros propios hooks",
+    component: React.lazy(() => import("../pages/Ejem24")),
+  },
+  {
+    to: "Ejercicio 9",
+    title: "Ejercicio 8",
+    description: "Bitcoins",
+    component: React.lazy(() => import("../pages/Ejercicio9")),
+  }, 
+  {
+    to: "Ejercicio 10",
+    title: "Ejercicio 8",
+    description: "Bitcoins",
+    component: React.lazy(() => import("../pages/Ejercicio10")),
+  }, 
 ];
