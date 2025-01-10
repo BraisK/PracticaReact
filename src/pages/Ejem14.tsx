@@ -1,13 +1,14 @@
 import { useState } from "react"
 
 interface Props {
-  initialCont: number
+  initialCont?: number
 }
 
-function Contador({ initialCont }: Props) {
+function Contador({ initialCont=0 }: Props) {
   const [cont, setCont] = useState(initialCont)
   const handleClick = () => {
-    //setCont(cont + 1)
+    //setCont(cont + 2)
+
     setCont( (prev) => prev+1)
     setCont( (prev) => prev+1)
   }

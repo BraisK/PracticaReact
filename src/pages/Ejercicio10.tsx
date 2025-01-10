@@ -6,3 +6,9 @@
  * El componente también mostrará en pantlalla (debajo del texto)
  * el numero de caracteres escritos en la caja de texto (length)
  */
+
+export default function Ejercicio10() {
+    return (
+        <div>Ejercicio10</div>
+    )
+}

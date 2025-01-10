@@ -235,4 +235,22 @@ export const routes = [
     description: "Bitcoins",
     component: React.lazy(() => import("../pages/Ejercicio10")),
   }, 
+  {
+    to: "Ejem27",
+    title: "Manejo del contexto",
+    description: "Con useContect",
+    component: React.lazy(() => import("../pages/Ejem27")),
+  },
+  {
+    to: "Ejercicio 12",
+    title: "Ejercicio 12",
+    description: "Ejercicio mostrar, añadir y eliminar nombres",
+    component: React.lazy(() => import("../pages/Ejercicio12")),
+  }, 
+  {
+    to: "Ejercicio 13",
+    title: "Ejercicio 13",
+    description: "Maquinas de cafe",
+    component: React.lazy(() => import("../pages/Ejercicio13")),
+  }, 
 ];

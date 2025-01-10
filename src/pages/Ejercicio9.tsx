@@ -16,3 +16,10 @@
  * Llame al API del backend creada en el paso anterior
  * Filtre y muestre solo los usarios con puntaciones mayores a 5
  */
+import React from 'react'
+
+export default function Ejercicio9() {
+    return (
+        <div>Ejercicio9</div>
+    )
+}
