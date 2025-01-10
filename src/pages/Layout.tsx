@@ -9,7 +9,7 @@ const Footer = () => (
 
 function Layout() {
   return (
-    <main className="">
+    <main className="flex flex-col grow">
       <Outlet />
       <Footer />
     </main>

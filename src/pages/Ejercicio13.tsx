@@ -33,7 +33,7 @@ function Ejercicio13() {
         setCafe(tipo)
     }
     const handleBuy = () => {
-        const devolver:number = dinero - 0.7
+        const devolver: number = dinero - 0.7
         const mensajito = 'Has comprado un cafe ' + cafe + ' con nivel de Azucar ' + azucar + ' su cambio es ' + devolver.toFixed(2) + ' €'
         const error = 'Saldo insuficiente'
         if (dinero >= 0.7) {
@@ -44,34 +44,40 @@ function Ejercicio13() {
     }
     return (
         <>
-            <div>
-                <h2>Dinero actual {dinero.toFixed(2)}</h2>
-                <div className="m-4 p-4">
-                    <h2>Ingresar dinero</h2>
-                    <button onClick={() => handleIngresar(0.1)}>0.1€</button>
-                    <button onClick={() => handleIngresar(0.2)}>0.2€</button>
-                    <button onClick={() => handleIngresar(0.5)}>0.5€</button>
-                    <button onClick={() => handleIngresar(1)}>1.0€</button>
-                    <button onClick={() => handleIngresar(2)}>2.0€</button>
-                    <button onClick={() => devolver()}>Devolver dinero</button>
-                </div>
-                <div>
-                    <p>Azucar: {azucar}</p>
-                    <button onClick={() => handleAddAzucar(1)}>+</button>
-                    <button onClick={() => handleDelAzucar(-1)}>-</button>
-                </div>
+            <div className="bg-white text-black rounded-xl">
+                <section className="grid grid-cols-2 ">
+                    <div className="bg-green-300">
 
-                <div>
-                    <p>Café seleccionado: {cafe}</p>
-                    <section>
+                        <p>Azucar: </p>
+                        <div className="text-white grid grid-cols-3">
+                            <button className="hover:bg-transparent hover:text-black" onClick={() => handleDelAzucar(-1)}>-</button>
+                            <p className="text-black">{azucar}</p>
+                            <button className="hover:bg-transparent hover:text-black" onClick={() => handleAddAzucar(1)}>+</button>
+                        </div>
 
-                    </section>
-                    <button onClick={() => handleTipeCafe('Corto')}>Corto</button>
-                    <button onClick={() => handleTipeCafe('Largo')}>Largo</button>
-                    <button onClick={() => handleTipeCafe('Descafeinado')}>Descafeinado</button>
-                </div>
-                <div>
-                    <button onClick={() => handleBuy()}>Comprar</button>
+                        <div>
+                            <p>Café seleccionado: {cafe}</p>
+                            <section className="text-white">
+                                <button className="hover:bg-transparent hover:text-black" onClick={() => handleTipeCafe('Corto')}>Corto</button>
+                                <button className="hover:bg-transparent hover:text-black" onClick={() => handleTipeCafe('Largo')}>Largo</button>
+                                <button className="hover:bg-transparent hover:text-black" onClick={() => handleTipeCafe('Descafeinado')}>Descafeinado</button>
+                            </section>
+                        </div>
+                    </div>
+                    <div className="bg-blue-500">
+                        <div className="m-4 p-4 text-white grid grid-cols-3 m-2">
+                            <button className="hover:bg-transparent m-2" onClick={() => handleIngresar(0.1)}>0.1€</button>
+                            <button className="hover:bg-transparent m-2" onClick={() => handleIngresar(0.2)}>0.2€</button>
+                            <button className="hover:bg-transparent m-2" onClick={() => handleIngresar(0.5)}>0.5€</button>
+                            <button className="hover:bg-transparent m-2" onClick={() => handleIngresar(1)}>1.0€</button>
+                            <button className="hover:bg-transparent m-2" onClick={() => handleIngresar(2)}>2.0€</button>
+                            <button className="hover:bg-transparent m-2" onClick={() => devolver()}>Devolver dinero</button>
+                        </div>
+                        <h2>Dinero actual {dinero.toFixed(2)}</h2>
+                    </div>
+                </section>
+                <div className="my-5">
+                    <button className="text-white" onClick={() => handleBuy()}>Comprar</button>
                 </div>
                 <footer><p>{comprar}</p></footer>
 
