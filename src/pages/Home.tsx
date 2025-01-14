@@ -14,7 +14,7 @@ export default function Home() {
                 description={description}
               />
             ) : (
-              <span className="text-2xl font-bold text-orange-300">
+              <span className={`${title?.startsWith('Ejercicio')&&'border border-blue-800'} text-2xl font-bold text-orange-300`}>
                 {title}
               </span>
             )}

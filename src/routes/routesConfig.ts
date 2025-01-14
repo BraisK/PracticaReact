@@ -234,6 +234,12 @@ export const routes = [
     title: "Ejercicio 8",
     description: "Bitcoins",
     component: React.lazy(() => import("../pages/Ejercicio10")),
+  },
+  {
+    to: "Ejem26",
+    title: "Filtrar mediante querys",
+    description: "Con useContect",
+    component: React.lazy(() => import("../pages/Ejem26")),
   }, 
   {
     to: "Ejem27",
@@ -253,4 +259,11 @@ export const routes = [
     description: "Maquinas de cafe",
     component: React.lazy(() => import("../pages/Ejercicio13")),
   }, 
+  {
+    to: "Ejercicio 14",
+    title: "Ejercicio 14",
+    description: "Filtrado de coches",
+    component: React.lazy(() => import("../pages/Ejercicio14")),
+  }, 
+  
 ];
