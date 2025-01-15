@@ -1,49 +1,73 @@
-/**
- * Mejora el ejercicio 12
- * Creando 2 componentes nuevos
- * 1 para el listado de usuarios
- * 1 para el formulario de añadir nuevos usuarios 
- */
-
 import { ChangeEvent, FormEvent, useState } from "react"
 
-const nombresDefault = ['Juan', 'Ana', 'Pablo']
-function Ejercicio15() {
-    const [nombres, setNombres] = useState(nombresDefault)
-    const [nombre, setNombre] = useState('')
+/* 
+Mejora el ejercicio 12.
+Creando 2 componente nuevos
+- Uno para el listado de usuarios
+- Otro para el formulario de añadir nuevos usuarios
+*/
+interface ListNamesProps {
+    names: string[]
+    onClick: (index: number) => void
+}
+function ListNames({ names, onClick }: ListNamesProps) {
+    return <>
+        {names.map((name, index) => <div key={index}>
+            {name}
+            <button className="text-red-500" onClick={() => onClick(index)}>X</button>
+        </div>)
+        }
+    </>
+}
+
+interface FormNamesProps {
+    onSubmit: (e: FormEvent, newName: string) => void
+}
+function FormNames({ onSubmit }: FormNamesProps) {
+    const [newName, setNewName] = useState('')
+
+    const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => setNewName(e.target.value)
 
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault()
-        if (!nombre) return
-        setNombres([...nombres, nombre])
-        setNombre('')
-    }
-    const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
-        setNombre(e.target.value)
-    }
-    const handleEliminarNombre = (index: number) => {
-        const nuevaLista = nombres.filter((_, i) => i !== index)
-        setNombres(nuevaLista)
+        setNewName('')
+        onSubmit(e, newName)
     }
 
     return (
-        <>
-            <form action="" onSubmit={handleSubmit}>
-                <label htmlFor="">Nuevo nombre </label>
-                <input value={nombre}
-                    onChange={handleOnChange} />
-                <button> Añadir</button>
-            </form>
-            <h1>Listado de nombres</h1>
-            <div>
-                {nombres.map((nombre, index) => <div key={index}>{nombre}
-                    <button
-                        className="text-red-500 bg-transparent"
-                        onClick={() => handleEliminarNombre(index)}>
-                        X</button>
-                </div>)}
-            </div>
-        </>
+        <form onSubmit={handleSubmit}>
+            <label>Nombre:</label>
+            <input value={newName} onChange={handleOnChange} />
+            <button>Añadir</button>
+        </form>
     )
 }
+
+
+const initialNames = ['Paula', 'Ana', 'Belén', 'María']
+function Ejercicio15() {
+    const [names, setNames] = useState(initialNames)
+
+    const handleSubmit = (e: FormEvent, newName: string) => {
+        if (!newName) return  // <-- validación
+        if (newName.length < 3) return // validación
+
+        setNames([...names, newName]) // <- insert en una BD
+        // llamar a un api
+        // guardar el BD
+    }
+
+
+    const handleDelete = (indexToDelete: number) => {
+        const newList = names.filter((_, index) => index !== indexToDelete)
+        setNames(newList)
+    }
+    return (
+        <div>
+            <FormNames onSubmit={handleSubmit} />
+            <ListNames names={names} onClick={(index) => handleDelete(index)} />
+        </div>
+    )
+}
+
 export default Ejercicio15

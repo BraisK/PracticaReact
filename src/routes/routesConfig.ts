@@ -264,6 +264,18 @@ export const routes = [
     title: "Ejercicio 14",
     description: "Filtrado de coches",
     component: React.lazy(() => import("../pages/Ejercicio14")),
+  },  
+  {
+    to: "Ejercicio 15",
+    title: "Ejercicio 15",
+    description: "Mejora del ejercicio 12",
+    component: React.lazy(() => import("../pages/Ejercicio15")),
   }, 
+  {
+    to: "Ejem28",
+    title: "Formularios no controlados",
+    description: "Creacion de formularios no contrados useRef",
+    component: React.lazy(() => import("../pages/Ejem28")),
+  },
   
 ];
